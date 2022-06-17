@@ -402,3 +402,134 @@ button.seccion-btn {
 .seccion-btn p{
     margin: 0;
 }
+
+.select-am{
+    width: 190px;
+}
+
+.table-center{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.centrar-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-pr{
+    width: 190px;
+    margin-left: -1px;
+}
+
+.btn-borrar{
+    padding: 0 4px;
+}
+
+.a_notas{
+    display: flex;
+    justify-content: center;
+}
+
+.a_combo{
+    width: 300px;
+    height: 30px;
+}
+
+.input-curso{
+    width: 300px;
+}
+
+.title-n{
+    font-size:30px;
+}
+
+.seguido{
+    display: flex;
+}
+
+.notas{
+    width: 205px;
+}
+
+.lprof{
+    width: 280px;
+    height: 200px;
+    border: solid 1px #333;
+}
+
+.listadoc{
+    display: block;
+}
+
+.textdoc{
+    width: 280px;
+    background-color: #134F5C;
+    border: 1px solid #333;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn-bienv{
+    padding: 16px 50px;
+    background-color: #085394;
+    color: white;
+    font-size: 28px;
+}
+
+.title_bienv{
+    font-size: 60px;
+    color: #073763;
+}
+
+.regisal{
+    display: flex;
+    margin: 5px 0;
+}
+
+.rb{
+    margin: 6px 0 0 -75px;
+}
+
+.masrb{
+    margin: 0 0 0 -75px;
+}
+
+.femrb{
+    margin: 0 0 0 30px;
+}
+
+.contenedor{
+    background-color: #134F5C;
+    width: 265px;
+    height: auto;
+    margin: 0 0 0 12px;
+    border: 1px solid #333;
+    
+}
+
+.titcont{
+    color: white;
+    font-weight: 500;
+}
+
+.titreg{
+    color: #073763;
+    font-size: 50px;
+}
+
+.btn-yelloww{
+    width: 100%;
+    height: 35px;
+    background-color: #FFCB00;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.selectcregis{
+    margin: 0 0 0 10px;
+    width: 363px;
+}
