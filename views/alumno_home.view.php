@@ -1,6 +1,6 @@
 <?php require 'views/template/head.view.php'; ?>
 <?php require 'views/template/header.view.php'; ?>
-<?php require 'views/template/nav-alumno.view.php'; ?>
+<?php require 'views/template/nav-alumno2.view.php'; ?>
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-12 d-flex justify-content-center">

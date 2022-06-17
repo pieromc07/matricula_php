@@ -2,7 +2,7 @@
 <?php require 'views/template/header.view.php'; ?>
 <?php require 'views/template/nav-alumno.view.php'; ?>
 
-<form class="row py-3">
+<form class="row py-3" method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <div class="col-md-12 text-center">
         <h4>Empece a Matricularse</h4>
     </div>
@@ -11,8 +11,14 @@
             <div class="col-6">
                 <div class="row">
 
+                   
                     <div class="col-6">
-                        <label for="curso" class="mb-1">
+
+                    <label for="seccion" class="mb-1">
+                            Seccion :
+                        </label><br>
+
+                        <!-- <label for="curso" class="mb-1">
                             Curso :
                         </label><br>
                         <label for="hora" class="mb-1">
@@ -20,37 +26,47 @@
                         </label><br>
                         <label for="docente">
                             Docente :
-                        </label>
+                        </label> -->
                     </div>
 
                     <div class="col">
-                        <select name="curso" id="curso" class="mb-2 select-am">
+                        <select name="seccion" id="seccion"  class="mb-2 select-am">
+
+                            <?php
+                                foreach ($secciones as $seccion) {
+                                    echo "<option value='".$seccion['seccion_id']."'>".$seccion['grado']." ".$seccion['seccion']."</option>";
+                                }
+                            ?>
+
+                        </select>
+
+                        <!-- <select name="curso" id="curso" class="mb-2 select-am">
                             <option value="1_matematica">Matemática</option>
                             <option value="2_fisica">Física</option>
                             <option value="3_quimica">Química</option>
-                        </select>
-                        <select name="hora" id="hora" class="mb-2 select-am">
+                        </select> -->
+                        <!-- <select name="hora" id="hora" class="mb-2 select-am">
                             <option value="lunes">lunes (7:00 - 9:30)</option>
                             <option value="martes">Martes (7:00 - 9:30)</option>
                             <option value="miercoles">Miercoles (7:00 - 9:30)</option>
                         </select>
-                        <input class="name-pr" type="text" value="Juan Aguilar Mamani" readonly id="docente">
+                        <input class="name-pr" type="text" value="Juan Aguilar Mamani" readonly id="docente"> -->
                     </div>
 
                 </div>
             </div>
             <div class="col mt-4">
                 <div class="row">
-                    <div class="col-6">
+                    <!-- <div class="col-6">
                         <button class="white mb-2" type="button" onclick="agregar()">Agregar</button>
-                    </div>
+                    </div> -->
                     <div class="col">
-                        <button class="white" id="matricula">Matricular</button>
+                        <button class="white" id="matricula" name="matricula" value="matricula">Matricular</button>
                     </div>
                 </div>
             </div>
 
-            <div class="row mt-5">
+            <!-- <div class="row mt-5">
                 <div class="col-12">
                     <div class="row centrar-table">
                         <div class="col-10">
@@ -64,25 +80,19 @@
                                     </tr>
                                 </thead>
                                 <tbody class="table-warning">
-                                    <!-- <tr>
-                                        <th scope="row">Curso 1</th>
-                                        <td>lunes (7:00 - 9:30)</td>
-                                        <td>Juan Aguilar Mamani</td>
-                                        <td><button type="button" class="btn-borrar">Borrar</button></td>
-                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>
 </form>
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 let index = 0;
 let cursos = [];
 
@@ -126,7 +136,7 @@ document.getElementById('matricula').addEventListener('click', function(e) {
         alert('Matricula realizada');
     }
 });
-</script>
+</script> -->
 
 
 <?php require 'views/template/footer.view.php'; ?>
