@@ -1,6 +1,6 @@
 <?php require 'views/template/head.view.php'; ?>
 
-<form class="login-container py-4">
+<form class="login-container py-4" method="POST" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
     <div class="login">
 
         <p class="login-title">INICIAR SESION</p>
