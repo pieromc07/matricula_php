@@ -7,13 +7,22 @@
         <label for="title" class="mt-4 title_bienv">Bienvenido al Colegio Mundo Ecológico</label>
     </div>
     <div class="col-4 a_notas mt-4 mb-5">
-        <button class="btn-bienv">Registrar Docente</button>
+        <a class="btn-bienv"
+            href="./admin_docente.php">
+            Registrar Docente
+        </a>
     </div>
     <div class="col-4 a_notas mt-4 mb-5">
-        <button class="btn-bienv">Registrar Curso</button>
+        <a class="btn-bienv"
+        href="./admin_curso.php"
+        >Registrar Curso</a>
     </div>
     <div class="col-4 a_notas mt-4 mb-5">
-        <button class="btn-bienv">Registrar Alumno</button>
+        <a class="btn-bienv"
+        href="./admin_alumno.php"
+            >Registrar Alumno
+
+        </a>
     </div>
 </div>
 

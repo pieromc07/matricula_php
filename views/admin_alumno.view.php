@@ -61,12 +61,12 @@
 
                 <div class="col regisal">
                     <h5 class="femrb">Femenino</h5>
-                    <input type="radio" name="genero" id="genero1" class="rb">
+                    <input type="radio" name="genero" id="genero1"  value="F" class="rb">
                 </div>
 
                 <div class="col regisal">
                     <h5 class="masrb">Masculino</h5>
-                    <input type="radio" name="genero" id="genero2" class="rb">
+                    <input type="radio" name="genero" id="genero2" value="M"  class="rb">
                 </div>
 
             </div>

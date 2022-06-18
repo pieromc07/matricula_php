@@ -7,7 +7,7 @@
         <label for="title" class="mt-3 mb-4 titreg">Registrar Curso</label>
     </div>
 </div>
-<form action="">
+<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
     <div class="row">
         <div class="col-8 ">
 
@@ -26,10 +26,10 @@
                 </div>
                 <div class="col regisal">
                     <select name="grado" id="grado" class="selectcregis">
-                        <option value="seleccione">Seleccione Grado</option>
-                        <option value="Primero">Primero</option>
-                        <option value="Segundo">Segundo</option>
-                        <option value="Tercero">Tercero</option>
+                        <option value="0">Seleccione Grado</option>
+                        <?php foreach($grados as $grado): ?>
+                        <option value="<?php echo $grado['id']; ?>"><?php echo $grado['descripcion']; ?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
             </div>
@@ -50,9 +50,9 @@
                 <div class="col regisal mb-5">
                     <select name="docente" id="docente" class="selectcregis">
                         <option value="seleccione">Seleccionar Docente</option>
-                        <option value="Docente1">Docente1</option>
-                        <option value="Docente2">Docente2</option>
-                        <option value="Docente3">Docente3</option>
+                        <?php foreach($docentes as $docente): ?>
+                        <option value="<?php echo $docente['id']; ?>"><?php echo $docente['nombre'].' '.$docente['apellidoPaterno'].' '.$docente['apellidoMaterno'];?></option>
+                        <?php endforeach; ?>
                     </select>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                     <label for="acciones" class="titcont">Acciones</label><br>
                 </div>
                 <div class="col-12">
-                    <button class="btn-yelloww">Registrar Docente</button>
+                    <button class="btn-yelloww" value="registrar">Registrar curso</button>
                 </div>
                 <div class="col-12">
                     <button type="button" class="btn-yelloww" onclick="borrar()">Nuevo</button>
@@ -80,7 +80,6 @@
 
 
 <script type="text/javascript">
-
 //borrar campos
 function borrar() {
     document.getElementById("curso").value = "";
@@ -88,7 +87,6 @@ function borrar() {
     document.getElementById("idcurso").value = "";
     document.getElementById("docente").querySelector("option[value='seleccione']").selected = true;
 }
-
 </script>
 
 <?php require 'views/template/footer.view.php'; ?>

@@ -7,7 +7,7 @@
         <label for="title" class="mt-3 mb-4 titreg">Registrar Docente</label>
     </div>
 </div>
-<form action="">
+<form action="<?php htmlspecialchars($_SERVER['PHP_SELF']);?>" method="POST">
     <div class="row">
         <div class="col-8 ">
             <div class="row">
@@ -61,12 +61,12 @@
 
                 <div class="col regisal">
                     <h5 class="femrb">Femenino</h5>
-                    <input type="radio" name="genero" id="genero1" class="rb">
+                    <input type="radio" name="genero" id="genero1" value="F"     class="rb">
                 </div>
 
                 <div class="col regisal">
                     <h5 class="masrb">Masculino</h5>
-                    <input type="radio" name="genero" id="genero2" class="rb">
+                    <input type="radio" name="genero" id="genero2" value="M" lass="rb">
                 </div>
 
             </div>
@@ -121,7 +121,7 @@
                     <label for="acciones" class="titcont">Acciones</label><br>
                 </div>
                 <div class="col-12">
-                    <button class="btn-yelloww">Registrar Docente</button>
+                    <button value="registrar" class="btn-yelloww">Registrar Docente</button>
                 </div>
                 <div class="col-12">
                     <button type="button" class="btn-yelloww" onclick="borrar()">Nuevo</button>
